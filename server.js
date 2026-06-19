@@ -13,12 +13,12 @@ app.post('/send-resume', async (req, res) => {
   }
 
   try {
-    // Send email using Brevo's HTTP API
+   // Send email using Brevo's HTTP API
     const response = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
         'accept': 'application/json',
-        'api-key': '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', // <-- REPLACE with your Brevo API key
+        'api-key': process.env.BREVO_API_KEY, // <-- Read key securely from Render
         'content-type': 'application/json'
       },
       body: JSON.stringify({
