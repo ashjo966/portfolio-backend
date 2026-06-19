@@ -9,8 +9,8 @@ app.use(express.json()); // Allow the server to read your website's submission
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'YOUR_GMAIL_ADDRESS@gmail.com',  // <-- Replace with your Gmail address
-    pass: 'YOUR_16_CHAR_APP_PASSWORD'     // <-- Replace with Google App Password (no spaces)
+    user: 'ashjo966@gmail.com',
+    pass: 'cfxtisktpkicvezx'
   }
 });
 
@@ -42,7 +42,7 @@ Ashwin Joshi`,
     attachments: [
       { 
         filename: 'AshwinJoshi_CV.pdf', 
-        path: 'https://ashjo966.github.io/AshwinJoshi_CV.pdf' // <-- Correct direct PDF link
+        path: 'https://ashjo966.github.io/AshwinJoshi_CV.pdf'
       } 
     ]
   };
