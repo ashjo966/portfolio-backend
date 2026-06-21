@@ -68,6 +68,8 @@ Ashwin Joshi`,
     console.error('Error sending email:', error);
     res.status(500).send({ success: false, message: error.message });
   }
+app.get('/debug-env', (req, res) => {
+  res.json({ keys: Object.keys(process.env) });
 });
 
 // START THE SERVER
